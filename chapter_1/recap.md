@@ -9,15 +9,15 @@ There's a lot of data in a computer's memory. There's even more if you include t
 
 *Whoa, what's a bit?* 
 
-Before we answer that, think about cells. We have a lot of them in our body. Our bodies intelligently allocate the amount of cells that's avaiable and make tissues, organs, and organ-systems out of them. 
+Before we answer that, think about the cells in our body. We have a lot of them flowing about. Our bodies intelligently allocate the amount of cells that are available and make tissues, organs, and organ-systems out of them. 
 
  Not all organ systems are the same (some are for breathing, some for digesting food). But they're all made of cells.
 
- *Now back to bit* 
+ *Now back to bits* 
 
-Data is stored in binary units called bits. Think of bits as cells flowing within the vast body (which in the case of a computer, is its hard-disk and working memory). 
+Data is stored in binary units called bits. 
 
-Bits describe things in terms of two. Something can be *true or false*, *high-signal or weak-signal*. 
+Bits describe things in terms of two. Something can be *true or false*, a *high-signal or weak-signal*, *on or off*. 
 
 Bits are stored in binary units. Numbers can be expressed in bits. 
 
@@ -76,7 +76,7 @@ JavaScript even follows the order of operations if you specify it with parens.
 
 You can also get the remainder of one number divided by another by using the `%` operator. `8 % 4` which will output `0`.
 
-#### Strings
+#### String 
 
 Strings are represented by the amount of bits that are allocated for text and characters. 
 
@@ -95,4 +95,79 @@ But I like back-ticks ``string with backticks`` more because you can include "te
 `half of 100 is ${100/2}`
 ```
 
-#### Strings
+#### Boolean 
+
+Boolean is a fancy-word for a value that gives two possibilities: "yes/no", "true/false". It's binary in nature. 
+
+In JavaScript (and I believe in all computer programming languages...), boolean values can be computed to yield `true` or `false` values.
+
+```
+3<2
+// false
+```
+
+```
+Infinity >= 3
+// true
+```
+```
+"Apple != "Orange"
+//true
+```
+```
+"Apple == "Orange"
+//false
+```
+##### You can use logical operators to output boolean values
+
+Can one statement be true while another false? What would happen if both were false? 
+
+Logical operators are used to answer those questions and generate boolean values in the process. 
+
+Javascript uses the following logical operators: `and`, `or`, and `not` operators, represented as `&&`, `||`, and `!` respectively. 
+
+```
+(3>2) && (2<3)
+//true and false gives us false
+//Something can't be both true and false at the same time.
+```
+
+```
+(3>2) && (5>2)
+//true and true gives us true
+//If one statement were true and the other true, then both statements must be true.
+```
+
+```
+(2<3) && (5>2)
+//false and true gives us false
+//Something can't be both true and false at the same time.
+```
+
+```
+(2<3) && (2<5)
+//false and false gives us false
+//Two false statements don't make it true. 
+```
+
+```
+(2<3) || (5>2)
+//true or false gives us true
+//Something can be both true or false at the same time.
+```
+
+```
+(2>3) || (5>2)
+//false or true gives us true
+//Something can be both true or false at the same time.
+```
+```
+(2>3) || (10<2)
+//false or false gives us false
+//Something can't be both false or false at the same time.
+```
+ 
+
+
+
+
