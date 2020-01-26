@@ -8,7 +8,7 @@ Ultimately, my mission as a designer is to research and ideate solutions for eve
 
 JavaScript is a popular language used across different programming environments, including the web-browser, server, database, and internet of things platforms. 
 
-According to Stack Overflow's 2019 developer survey, 67.8% code in JavaScript, although Python and Rust are the most "beloved". TypeScript is edging its way on third place, so JavaScript looks like it's here to stay in the long-term. 
+According to Stack Overflow's 2019 developer survey, 67.8% code in JavaScript, although Python and Rust are the most "beloved". TypeScript is edging its way on third place as the most "loved" language, so as a variant of JavaScript with more capabilities, JS looks like it's here to stay in the long-term. 
 
 I've heard great things about Marjin Haverbeke's Eloquent JavaScript (now in its 3rd edition) and wanted to challenge myself by going through the first 7 chapters of the book. My goal is to write up a summary for each chapter, while solving the problem-sets and pushing them up to Github. 
 
