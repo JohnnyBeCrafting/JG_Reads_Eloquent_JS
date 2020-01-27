@@ -17,11 +17,11 @@ Not all organ systems are the same (some are for breathing, some for digesting f
 
 In programming languages, a bit is an atomic unit of data. All of the bits that are available in a computer's working memory is split into chunks of data called *values*. 
 
-Each value has a specific "role" to play, much like the organ systems in your body. Some values are meant to store numbers, while some store text, and true/false values. Other values are more complex and can store bigger pieces of data as well as input/output operations (called functions).
+Each value has a specific "role" or "type" to play, much like the organ systems in your body. Some values are meant to store numbers, while some store text, and true/false values. Other values are more complex and can store bigger pieces of data as well as input/output operations (called functions).
 
 > There's only so much space to go around for each type of value. Every value has to be stored somewhere, and if you want to use a gigantic amount of them at the same time, you might run out of memory. 
 
-Let's explore these different value roles: 
+Let's explore these different value types: 
 
 ### Numbers 
 
@@ -164,6 +164,33 @@ But if the userName variable was declared without an assigned value, then that v
 `Null` is the absence of a value.
 
 Here's a great [write-up](https://stackoverflow.com/questions/5076944/what-is-the-difference-between-null-and-undefined-in-javascript) on the difference between `undefined` and `null`
+
+## Automatic Type Conversion
+
+How does JavaScript resolve an operation involving two different value types? 
+
+For example:
+
+```
+2 * null 
+// null is interpreted as 0 and gives us 0 as a result
+```
+```
+2 * '5'
+// the string '5' is interpreted as the number 5 and gives us 10 as a result
+```
+```
+'5' + 1
+// this operation is interpreted as a string concatenation outputting a string value of '51' 
+```
+This method of "interpreting" a value's data-type is known as "type coercion". 
+
+Check this out:
+
+`2 == '2'` gives us `true`, though it should really give us `false`. Numbers and text are not the same value type, afterall; yet JavaScript will "coerce" the string value to a number type, thereby making it `true`. 
+
+What if you want to treat values for what they really are? For co
+
 
 
 
