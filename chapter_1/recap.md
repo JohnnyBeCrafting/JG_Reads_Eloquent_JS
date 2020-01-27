@@ -1,64 +1,37 @@
 # Values, Types, Operators
 
 ## Data
-Data can be read, modified, or created. This way of thinking about data informs the way apps are created (as you can create, delete, edit/update content). 
+Data can be read, modified, or created. This way of thinking about data informs the way apps are created (as you can read, create, delete, edit/update content). 
 
-There's a lot of data in a computer's memory. There's even more if you include the computer's hard-disk. 
+There's a lot of data in a computer's memory. 
 
 > A typical computer has 30 billion bits
 
 *Whoa, what's a bit?* 
 
-Before we answer that, think about the cells in our body. We have a lot of them flowing about. Our bodies intelligently allocate the amount of cells that are available and make tissues, organs, and organ-systems out of them. 
+Before we answer that, think about the cells in your body. You have a lot of them moving about. Your body intelligently allocates the amount of cells available in order to make tissues, organs, and organ-systems out of them.
 
- Not all organ systems are the same (some are for breathing, some for digesting food). But they're all made of cells.
+Not all organ systems are the same (some are for breathing, some for digesting food). But they're all made of cells.
 
- *Now back to bits* 
+> In the world of computers, a cell is analogous to a bit
 
-Data is stored in binary units called bits. 
+In programming languages, a bit is an atomic unit of data. All of the bits that are available in a computer's working memory is split into chunks of data called *values*. 
 
-Bits describe things in terms of two. Something can be *true or false*, a *high-signal or weak-signal*, *on or off*. 
+Each value has a specific "role" to play, much like the organ systems in your body. Some values are meant to store numbers, while some store text, and true/false values. Other values are more complex and can store bigger pieces of data as well as input/output operations (called functions).
 
-Bits are stored in binary units. Numbers can be expressed in bits. 
+> There's only so much space to go around for each type of value. Every value has to be stored somewhere, and if you want to use a gigantic amount of them at the same time, you might run out of memory. 
 
-Think of the number 15. If we were to express it as a decimal unit, we'd do the following procedure:
+Let's explore these different value roles: 
 
-> 15 is the result of 10 available numbers in the "tens" place, plus 10 available numbers in the "ones" place. Each base in the decimal system moves up by a power of 10. 
-
-As you move up in base, there's additional "room" for numbers by a factor of that base. 
-
-> 115 is the result of 100 available numbers in the "hundreds" place, plus 10 available numbers in the "tens" place, plus 10 available numbers in the "ones" place. 
-
-How does this look like in binary? 
-
-Now let's take 15 and describe it in the binary system. Whereas each factor in the decimal-number system is of a base of 10, each factor in binary is of a base of 2. 
-
-Binary asks the following questions: In the 0 place is there room for a number? If so, 
-
-> 1111 
-
-There are 4 bits of avaialble "space" to get to 15 in binary. 
-
-Data is allocated and stored in the amount of space that's available in working memory and the hard-disk. A computer has more than 30 billion bits for allocating this data.
-
-### JavaScript makes use of this data
-JavaScript groups all this data and assigns them a type of role. Some data type serves as text, some will serve as numbers for doing math operations, some will be used as true/false operators for doing conditional logic, some will be used as data-structures for storing complex data, and some will take inputs and spit out outputs in the form of a function. 
-
-There's only so much space to go around for each type of data. 
-
-> Every value has to be stored somewhere, and if you want to use a gigantic amount of them at the same time, you might run out of memory. 
-
-Data is recycleable. If you're not using a piece of data-type, it will be recycled for other values to use. 
-
-#### Numbers 
+### Numbers 
 
 Javascript has 64 bits of storage available for a number type. There are 2^64 different numbers that can be represented in JS. 
 
-64 bits is a lot of storage for numbers- out of these 64 bits, there are bits allocated for negative, and decimal numbers as well.
+64 bits is a lot of storage for numbers. Out of these 64 bits, there are bits allocated for negative, and decimal numbers as well.
 
 > Many numbers lose some precision when only 64 bits are available to store them.
 
-##### You can do math operations
+#### You can do math operations
 
 ```
 1+1 
@@ -76,7 +49,7 @@ JavaScript even follows the order of operations if you specify it with parens.
 
 You can also get the remainder of one number divided by another by using the `%` operator. `8 % 4` which will output `0`.
 
-#### String 
+### String 
 
 Strings are represented by the amount of bits that are allocated for text and characters. 
 
@@ -95,32 +68,34 @@ But I like back-ticks ``string with backticks`` more because you can include "te
 `half of 100 is ${100/2}`
 ```
 
-#### Boolean 
+### Boolean 
 
 Boolean is a fancy-word for a value that gives two possibilities: "yes/no", "true/false". It's binary in nature. 
 
-In JavaScript (and I believe in all computer programming languages...), boolean values can be computed to yield `true` or `false` values.
+Booleans can be produced by comparing two values in such a way that the end-result is `true` or `false`.
 
 ```
 3<2
-// false
+//is 3 greater than 2? false
 ```
 
 ```
 Infinity >= 3
-// true
+// Is infinity greater than OR equal to 3? true
 ```
 ```
 "Apple != "Orange"
-//true
+//Is an apple NOT an orange? true
 ```
 ```
 "Apple == "Orange"
-//false
+//Is an apple an orange? false
 ```
-##### You can use logical operators to output boolean values
+#### You can use logical operators to output boolean values
 
-Can one statement be true while another false? What would happen if both were false? 
+Can one statement be true *and* another false? What would happen if both were false? 
+
+Can one statement be true *or* another false? Would it make a difference What would happen if one statement were false or the other false as well? 
 
 Logical operators are used to answer those questions and generate boolean values in the process. 
 
@@ -166,7 +141,35 @@ Javascript uses the following logical operators: `and`, `or`, and `not` operator
 //false or false gives us false
 //Something can't be both false or false at the same time.
 ```
- 
+
+> The `!` operator is used to negate a boolean value. `!true` gives us
+`false`.
+
+### Empty values
+
+In Javascript, the value `undefined` simply means that there is no explicit value assigned to a variable. 
+
+> Think of a user who's trying to log-in to your app. Your app will have to store their username and make reference to that name throughout the entire time they're logged in.
+
+The best way to do that is to create a `variable` which will remember that user's name during their session. 
+
+`let userName = 'John Doe'`; 
+
+This userName variable has been declared and assigned a value of `"John Doe"`. 
+
+But if the userName variable was declared without an assigned value, then that variable is `undefined`. It's JavaScript's way of saying, "hey, you've declared me I'm ready to take in a value and store it into memory." 
+
+`Undefined` is not necessarily a prgramming error. It's just JavaScript's way of letting the programmer know that there's a value that needs to be assigned to a variable. 
+
+`Null` is the absence of a value.
+
+Here's a great [write-up](https://stackoverflow.com/questions/5076944/what-is-the-difference-between-null-and-undefined-in-javascript) on the difference between `undefined` and `null`
+
+
+
+
+
+
 
 
 
