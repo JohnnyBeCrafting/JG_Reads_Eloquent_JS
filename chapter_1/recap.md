@@ -9,7 +9,7 @@ There's a lot of data in a computer's memory.
 
 *Whoa, what's a bit?* 
 
-Before we answer that, think about the cells in your body. You have a lot of them moving about. Your body intelligently allocates the amount of cells available in order to make tissues, organs, and organ-systems out of them.
+Before we answer that, think about the cells in your body. You have [trillions](https://www.wonderopolis.org/wonder/how-many-cells-are-in-the-human-body) of them moving about. Your body intelligently allocates the amount of cells available in order to make tissues, organs, and organ-systems out of them.
 
 Not all organ systems are the same (some are for breathing, some for digesting food). But they're all made of cells.
 
