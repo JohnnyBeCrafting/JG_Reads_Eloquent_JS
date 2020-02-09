@@ -189,7 +189,7 @@ Check this out:
 
 `2 == '2'` gives us `true`, though it should really give us `false`. Numbers and text are not the same value type, afterall; yet JavaScript will "coerce" the string value to a number type, thereby making it `true`. 
 
-What if you want to treat values for what they really are? check this out. new version
+What if you want to treat values for what they really are? 
 
 
 
