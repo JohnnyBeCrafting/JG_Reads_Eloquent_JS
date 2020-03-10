@@ -139,55 +139,57 @@ Infinity >= 3
 "Apple == "Orange"
 //Is an apple an orange? false
 ```
-#### You can use logical operators to output boolean values
+### You can use logical operators to output boolean values
 
 Can one statement be true *and* another false? What would happen if both were false? 
 
-Can one statement be true *or* another false? Would it make a difference What would happen if one statement were false or the other false as well? 
+Can one statement be true *or* another false? 
 
 Logical operators are used to answer those questions and generate boolean values in the process. 
 
 Javascript uses the following logical operators: `and`, `or`, and `not` operators, represented as `&&`, `||`, and `!` respectively. 
 
+Some examples:
+
 ```
 (3>2) && (2<3)
-//true and false gives us false
-//Something can't be both true and false at the same time.
+// `true` and `false` gives us `false`
+// Something can't be both true AND false at the same time.
 ```
 
 ```
 (3>2) && (5>2)
-//true and true gives us true
-//If one statement were true and the other true, then both statements must be true.
+// `true` AND `true` gives us `true`
+// If one statement were true AND the other true, then both statements must be true.
 ```
 
 ```
 (2<3) && (5>2)
-//false and true gives us false
-//Something can't be both true and false at the same time.
+// `false` AND `true` gives us `false`
+// Something can't be both `true` AND `false` at the same time.
 ```
 
 ```
 (2<3) && (2<5)
-//false and false gives us false
-//Two false statements don't make it true. 
+// `false` AND `false` gives us `false`
+// Two `false` statements don't make it true. 
 ```
 
 ```
 (2<3) || (5>2)
-//true or false gives us true
-//Something can be both true or false at the same time.
+// `true` OR `false` gives us `true`
+// Something can be both `true` OR `false` at the same time.
 ```
 
 ```
 (2>3) || (5>2)
-//false or true gives us true
-//Something can be both true or false at the same time.
+// `false` OR `true` gives us `true`
+// Something can be both `true` OR `false` at the same time.
 ```
 ```
 (2>3) || (10<2)
-//false or false gives us false
-//Something can't be both false or false at the same time.
+// `false` OR `false` gives us `false`
+// Something can't be both `false` OR `false` at the same time.
 ```
 
 > The `!` operator is used to negate a boolean value. `!true` gives us
@@ -207,7 +209,7 @@ This userName variable has been declared and assigned a value of `"John Doe"`.
 
 But if the userName variable was declared without an assigned value, then that variable is `undefined`. It's JavaScript's way of saying, "hey, you've declared me I'm ready to take in a value and store it into memory." 
 
-`Undefined` is not necessarily a prgramming error. It's just JavaScript's way of letting the programmer know that there's a value that needs to be assigned to a variable. 
+`Undefined` is not necessarily a programming error. It's just JavaScript's way of letting the programmer know that there's a value that needs to be assigned for that variable. 
 
 `Null` is the absence of a value.
 
@@ -235,9 +237,41 @@ This method of "interpreting" a value's data-type is known as "type coercion".
 
 Check this out:
 
-`2 == '2'` gives us `true`, though it should really give us `false`. Numbers and text are not the same value type, afterall; yet JavaScript will "coerce" the string value to a number type, thereby making it `true`. 
+`2 == '2'` gives us `true`, though it should really give us `false`. Numbers and text are not the same value type, yet JavaScript will "coerce" the string value to a number type, thereby making it `true`. 
 
-What if you want to treat values for what they really are? 
+>This can get confusing really fast, a number should be a number and a string should be a string. 
+
+We can compare between two values without relying on type coercion by using `===` or `!==` instead of `==` or `!=`. 
+
+```
+2 === '2'
+// gives us false
+```
+
+> "I recommend using the three-character comparison operators defensively to prevent unexpected type conversions from tripping you up." 
+-Marijn Haverbeke
+
+## Short-Circuiting of Logical Operators
+
+The logical operators `&&` and `||` can be used to evaluate and fall back on a default value. 
+
+Say you're displaying the user's name on a webapp: 
+
+```
+let user = 'Joe' || 'user';
+// 'Joe' gets converted to a Boolean value of "True" 
+// We know that `True` || anything results to `True`, and because Joe is true, then the user will be 'Joe'.
+```
+
+```
+let user = null || 'default user';
+// null gets converted to False, and 'user' to True.
+// Because user is True, the user variable will be assigned to 'default user'. 
+```
+
+
+
+
 
 
 
