@@ -69,17 +69,54 @@ Strings can be enclosed by single or double quote marks.
 'Hello world'
 "Hello world" 
 ```
-Say you want to include two lines for your string text, one on top of the other. You can include an `escape character` using the backslash `\`.
- 
+Some strings need additional tab spaces, quotation marks, or additional lines.
 
-
-But I like back-ticks ``string with backticks`` more because you can include "template literals" which can do computations from within and output the string.  
+Say you want to embed quotations and make one text go on top of the other, like this:
 
 ```
-`half of 100 is ${100/2}`
+John said: "Hi, are you going?"
+Joan replied: "No, I am not."
+```
+To achieve this, you can include `escape characters` using the backslash `\n` to create the newline character and `\"` to embed the double quotes. Just like this:
+
+```
+let message = "John said: \"Hi, are you going?\" \n Joane replied: \"No I'm staying in.\" ";
+```
+This looks complicated and really annoying to do. As we say in NYC:
+
+> Ain't nobody got time for memorizing escape characters and using them in strings. Besides, escape characters were an outdated hack that was used for controlling typewriters in the past. #Facts.
+
+I just use back-ticks ``string with backticks`` and express the strings as I wish without having to use those pesky escape characters. 
+
+For example;
+
+```
+let text = `John said: "Hey are you going to school?"
+Joan said: "Nah, I'm staying in"`;
+```
+There... no need for those `\n` or `\'` characters.
+
+Besides, backticks allow for us to compute values within a string, using the `${}` syntax, like this:
+
+```
+let output = '';
+output += `half of 100 is ${100/2}`;
+console.log(output);
+```
+> When you write something inside `${}` its result will be computed, converted to a string, and included at the position. 
+
+Although we can't perform math operations in strings, we can treat strings as values that can be evaluated through the use of `${}`.
+
+One more example: 
+
+```
+let d = new Date();
+let currentYear = d.getFullYear();
+let studentName = "John"; 
+let userBio = `${studentName} is a freshman and will graduate in ${currentYear + 4}`;
 ```
 
-### Boolean 
+## Boolean 
 
 Boolean is a fancy-word for a value that gives two possibilities: "yes/no", "true/false". It's binary in nature. 
 
