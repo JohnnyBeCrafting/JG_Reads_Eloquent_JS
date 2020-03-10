@@ -1,41 +1,45 @@
 # Values, Types, Operators
 
 ## Data
-As humans, we communicate emotions, intent, and commands (among many other things) with words in a certain language. Whether it's Spanish, French, or Japanese- we use words encoded in that language to express our thoughts and sentiments.  
+As humans, we are equipped with the ability to communicate emotions, intent, commands (among many other things) with words in any given language. Whether it's Spanish, French, or Japanese- we use words encoded in that language to express our thoughts and sentiments.  
 
-As for computers, they are neither thoughtful or sentimental- but they are communicative, however. They have ways of receiving input and returning outputs to interact with humans or other computers.
+As for computers, they are neither thoughtful or sentimental- but they are communicative, however. They have ways of listening to certain things and returning other things in order to interact with humans or other computers. 
 
-Whereas the atomic unit of communication for humans are words, computers rely on data as the means of communicating information. Data can be read, modified, or created. This way of thinking about data informs the way computer programs are created.
+Whereas the atomic unit of communication for humans are words, computers rely on data as the means of communicating information. Computers can listen to data (think of a user submitting a file) and return it (outputting a piece of data). Data can be read, modified, or created by humans interacting with the computer. This way of thinking about data informs the way computer programs are created.
 
 There's a lot of data in a computer's memory. 
 
-> A typical computer has 30 billion bits
+> A typical computer has 30 billion bits in its working memory.
 
 *Whoa, what's a bit?* 
 
-Before we answer that, think about the cells in your body. You have [trillions](https://www.wonderopolis.org/wonder/how-many-cells-are-in-the-human-body) of them moving about. Your body intelligently allocates the amount of cells available in order to make tissues, organs, and organ-systems out of them.
+Before we answer that, think about the cells in your body. You have [trillions](https://www.wonderopolis.org/wonder/how-many-cells-are-in-the-human-body) of them moving about. Your body intelligently allocates the amount of cells available in order to make tissues, organs, and organ-systems from them.
 
-Not all organ systems are the same (some are for breathing, some for digesting food). But they're all made of cells.
+Not all organ systems are the same (some are allocated for breathing, some for digesting food). But they're all made of the same clump of cells.
 
 > In the world of computers, a cell is analogous to a bit
 
 In programming languages, a bit is an atomic unit of data. All of the bits that are available in a computer's working memory is split into chunks of data called *values*. 
 
-Each value has a specific "role" or "type" to play, much like the organ systems in your body. Some values are meant to store numbers, while some store text, and true/false values. Other values are more complex and can store bigger pieces of data as well as input/output operations (called functions).
+Each value has a specific "role" or "type" to play, much like the organ systems in your body. Some values are meant to store numbers, while some store text, and true/false values. 
+
+Other values are more complex and can store bigger pieces of data as well as input/output operations (called functions).
 
 > There's only so much space to go around for each type of value. Every value has to be stored somewhere, and if you want to use a gigantic amount of them at the same time, you might run out of memory. 
 
 Let's explore these different value types: 
 
-### Numbers 
+## Numbers 
 
-Javascript has 64 bits of storage available for a number type. There are 2^64 different numbers that can be represented in JS. 
+Javascript has 64 bits of storage available for a number type. There are 2^64 different numbers that can be represented in the JavaScript programming language. 
 
 64 bits is a lot of storage for numbers. Out of these 64 bits, there are bits allocated for negative, and decimal numbers as well.
 
 > Many numbers lose some precision when only 64 bits are available to store them.
 
-#### You can do math operations
+We must treat decimal numbers as approximations and not as precise values.
+
+### You can do math operations
 
 ```
 1+1 
@@ -53,7 +57,7 @@ JavaScript even follows the order of operations if you specify it with parens.
 
 You can also get the remainder of one number divided by another by using the `%` operator. `8 % 4` which will output `0`.
 
-### String 
+## String
 
 Strings are represented by the amount of bits that are allocated for text and characters. 
 
@@ -65,6 +69,9 @@ Strings can be enclosed by single or double quote marks.
 'Hello world'
 "Hello world" 
 ```
+Say you want to include two lines for your string text, one on top of the other. You can include an `escape character` using the backslash `\`.
+ 
+
 
 But I like back-ticks ``string with backticks`` more because you can include "template literals" which can do computations from within and output the string.  
 
