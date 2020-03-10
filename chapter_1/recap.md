@@ -1,7 +1,11 @@
 # Values, Types, Operators
 
 ## Data
-Data can be read, modified, or created. This way of thinking about data informs the way apps are created (as you can read, create, delete, edit/update content). 
+As humans, we communicate emotions, intent, and commands (among many other things) with words in a certain language. Whether it's Spanish, French, or Japanese- we use words encoded in that language to express our thoughts and sentiments.  
+
+As for computers, they are neither thoughtful or sentimental- but they are communicative, however. They have ways of receiving input and returning outputs to interact with humans or other computers.
+
+Whereas the atomic unit of communication for humans is words, computers rely on data as the means of communicating information. Data can be read, modified, or created. This way of thinking about data informs the way computer programs are created.
 
 There's a lot of data in a computer's memory. 
 
