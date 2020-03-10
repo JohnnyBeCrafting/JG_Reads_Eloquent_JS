@@ -253,21 +253,42 @@ We can compare between two values without relying on type coercion by using `===
 
 ## Short-Circuiting of Logical Operators
 
-The logical operators `&&` and `||` can be used to evaluate and fall back on a default value. 
+Short-circuit evaluation uses the logical operators `&&` and `||` to do the following:
 
-Say you're displaying the user's name on a webapp: 
+1. Convert a set of values into boolean values
+2. Evaluate between those sets of boolean values
+3. Return a member of that set of values 
 
-```
-let user = 'Joe' || 'user';
-// 'Joe' gets converted to a Boolean value of "True" 
-// We know that `True` || anything results to `True`, and because Joe is true, then the user will be 'Joe'.
-```
+Let's demonstrate with an example:
 
 ```
-let user = null || 'default user';
-// null gets converted to False, and 'user' to True.
-// Because user is True, the user variable will be assigned to 'default user'. 
+let user = 'Agnes' || ''
 ```
+
+Because a logical `||` is being invoked, the two values ('Agnes' and 'user') are converted into Boolean values. 'Agnes' is converted to `True` and  the empty string `''` is converted to `False`. 
+
+Next, those two values are evaluated. We've learned that `True || False` evaluates to `True`.
+
+No matter what the expression on the right of 'Agnes' is, because 'Agnes' evaluates to `True`, the expression "short-circuits", or stops the evaluation process, and immediately returns 'Agnes'.
+
+Lastly, 'Agnes' is assigned to the `user` variable.
+
+Let's see this example:
+
+```
+let user = '' || 'awesome user';
+```
+
+What do you think will happen here? 
+
+First, the empty string `''` will convert to `False` and 'awesome user' will convert to `True`. 
+
+We know that `False || True` evaluates to `True`. 
+
+The expression will continue searching over the value that evaluates to `True` and will return it to the `user` variable.
+
+Now `user = awesome user`.
+ 
 
 
 
