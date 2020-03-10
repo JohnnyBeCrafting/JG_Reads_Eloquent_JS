@@ -288,8 +288,6 @@ We know that `False || True` evaluates to `True`.
 The expression will continue searching over the value that evaluates to `True` and will return it to the `user` variable.
 
 Now `user = awesome user`.
- 
-testing again!
 
 
 
